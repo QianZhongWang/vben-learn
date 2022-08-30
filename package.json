@@ -4,9 +4,29 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "commit": "echo 'czg'",
+    "bootstrap": "yarn install",
+    "serve": "yarn dev",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build:test": "echo '打包📦测试文件'",
+    "build:no-cache": " echo '将清空缓存后打包📦' && yarn clean:cache && yarn build",
+    "report": "echo 'todo 报告生成中...' ",
+    "type:check": "vue-tsc --noEmit --skipLibCheck",
+    "preview": "yarn build && vite preview",
+    "previrw:dist": "vite preview",
+    "log": "echo '生成git 提交记录'",
+    "cache:claan": "echo '清空缓存'",
+    "lint:eslint": "eslint --cache --max-warnings 0 --ext \"{src/mock}/**/*.{vue,ts,tsx}\" --fix",
+    "lint:prettier": "prettier --write \"src/**/*{js,json,tsx,css,less,scss,vue,html,md}\"",
+    "lint:stylelint": "stylelint --cache --fix \"src/**/*{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint:lint-staged": "lint-staged",
+    "test:unit": "jest",
+    "test:gzip": "echo 'todo gzip 测试'",
+    "test:br": "echo 'todo br 测试'",
+    "reinstall": "echo '重新安装依赖'",
+    "prepare": "echo 'todo 准备工作'",
+    "gen:icon": "echo 'todo 图标生成'"
   },
   "dependencies": {
     "vue": "^3.2.37"
