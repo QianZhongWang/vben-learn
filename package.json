@@ -26,13 +26,18 @@
     "test:gzip": "echo 'todo gzip 测试'",
     "test:br": "echo 'todo br 测试'",
     "reinstall": "rimraf pnpm-lock.yaml && rimraf package.lock.json && rimraf node_modules && yarn bootstrap",
-    "prepare": "echo 'todo 准备工作'",
+    "prepare": "husky install",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
     "gen:icon": "echo 'todo 图标生成'"
   },
   "dependencies": {
     "vue": "^3.2.37"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "@typescript-eslint/parser": "^5.35.1",
     "@vitejs/plugin-vue": "^3.0.3",
@@ -41,6 +46,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.4.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "pinst": "^3.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
